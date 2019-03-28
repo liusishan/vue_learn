@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8" />
 		<title>v-text与v-html</title>
@@ -7,11 +7,36 @@
 	</head>
 	<body>
 		<div id="app">
-			<div></div>
-			<div></div>
+            <!--<div v-text="message"></div>-->
+            <!--<div v-html="message"></div>-->
+            <font size="5" v-bind:color="ys1">传智播客</font>
+            <font size="5" :color="ys2">黑马程序员</font>
 		</div>
 	</body>
 	<script>
 		//view model
-	</script>
+        //view model
+        // 差值表达式不能用于html便签的属性取值
+        // 要想给html标签的属性设置属性的值，需要使用v-bind
+        // v-bind可以简化写法，直接使用冒号 ":"
+
+        new Vue({
+            el:"#app",
+            data:{
+                ys1:"red",
+                ys2:"green"
+            }
+        });
+
+        // new Vue({
+        //     el:"#app",
+        //     data:{
+        //         message:"<h1>Hello Vue</h1>"
+        //     }
+        // });
+        // 传统 js
+        // document.getElementById("div1").innerText="<h1>Hello</h1>";
+        // document.getElementById("div2").innerHTML="<h1>Hello</h1>";
+
+    </script>
 </html>
