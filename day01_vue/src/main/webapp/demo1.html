@@ -8,6 +8,16 @@
 	<body>
 		<div id="app">
 			{{massage}} <!-- vue的插值表达式 ，把data中定义的数据显示到此处-->
+
+			<!-- 三元运算符 -->
+			{{ false ? "OK" : "NO" }}
+            <!-- 数学运算 -->
+            {{ number * 3.14 }}
+
+            <!-- 插值表达式不支持
+             {{ var a = 1;}}
+             {{ if(a=10){} }}
+             -->
 		</div>
 	</body>
 	<script>
@@ -16,7 +26,8 @@
 		new Vue({
 			el: "#app", // 由vue接管id为app的区域
 			data:{
-			    massage:"Hello Vue!" // 注意此处不要加分号
+			    massage:"Hello Vue!", // 注意此处不要加分号
+                number:100
 			}
 		});
 
