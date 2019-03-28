@@ -7,11 +7,18 @@
 	</head>
 	<body>
 		<div id="app">
-			
+			{{massage}} <!-- vue的插值表达式 ，把data中定义的数据显示到此处-->
 		</div>
 	</body>
 	<script>
 		//view model
-		
+		// 创建vue对象
+		new Vue({
+			el: "#app", // 由vue接管id为app的区域
+			data:{
+			    massage:"Hello Vue!" // 注意此处不要加分号
+			}
+		});
+
 	</script>
 </html>
