@@ -7,6 +7,8 @@
 		<style>
 			#div {
 				background-color: red;
+                width: 300px;
+                height: 300px;
 			}
 		</style>
 		<script src="js/vuejs-2.5.16.js"></script>
@@ -17,11 +19,41 @@
 			<div @mouseover="fun1" id="div">
 				<textarea @mouseover="fun2($event)">这是一个文件域</textarea>
 			</div>
+			<!--<div onmouseover="divmouseover()" id="div">-->
+				<!--<textarea onmouseover="textareamouseover()">这是一个文件域</textarea>-->
+			<!--</div>-->
 		</div>
 	</body>
 	<script>
 		//view model
-		
+        /**
+         * @事件名称  就是  v-on:事件名称的简写方式
+         * @mouseover 它就等同于 v-on:mouseover
+         */
+        new Vue({
+           el:"#app",
+           methods:{
+               fun1:function () {
+                   alert("鼠标悬停到了div上了");
+               },
+               fun2:function (event){
+                   alert("鼠标悬停到了testarea上了");
+                   event.stopPropagation();
+               }
+           }
+        });
+
+		// 传统js方式
+		function divmouseover() {
+			alert("鼠标移动到了div上了");
+        }
+
+        function textareamouseover() {
+			alert("鼠标移动到了testarea上了");
+			event.stopPropagation();
+        }
+
+
 	</script>
 
 </html>
