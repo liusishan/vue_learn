@@ -1,4 +1,4 @@
-package com.lss.doman;
+package com.lss.domain;
 
 import java.io.Serializable;
 

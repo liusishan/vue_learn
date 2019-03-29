@@ -1,6 +1,6 @@
 package com.lss.test;
 
-import com.lss.doman.User;
+import com.lss.domain.User;
 import com.lss.service.IUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

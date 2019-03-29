@@ -1,6 +1,6 @@
 package com.lss.service;
 
-import com.lss.doman.User;
+import com.lss.domain.User;
 
 import java.util.List;
 

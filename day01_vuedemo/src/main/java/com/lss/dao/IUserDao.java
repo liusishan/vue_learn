@@ -1,6 +1,6 @@
 package com.lss.dao;
 
-import com.lss.doman.User;
+import com.lss.domain.User;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

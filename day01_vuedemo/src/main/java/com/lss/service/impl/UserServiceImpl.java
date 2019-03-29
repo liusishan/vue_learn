@@ -1,7 +1,7 @@
 package com.lss.service.impl;
 
 import com.lss.dao.IUserDao;
-import com.lss.doman.User;
+import com.lss.domain.User;
 import com.lss.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
