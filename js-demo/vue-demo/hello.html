@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="app">
+
+    <div style="width: 200px;height: 200px;background-color: cornsilk;"
+         @click.stop="print('div')">
+        div
+        <button @click.stop="print('button')">点我试试</button>
+    </div>
+
+</div>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+    const app = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+            print(msg) {
+                console.log(msg);
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
