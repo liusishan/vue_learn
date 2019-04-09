@@ -33,6 +33,10 @@
     <h1>
         您的生日: {{birth}}
     </h1>
+
+    <!-- watch -->
+    <input type="text" v-model="num">
+    您的年龄是：{{num}}
 </div>
 
 <script src="node_modules/vue/dist/vue.js"></script>
@@ -42,12 +46,28 @@
         el: "#app",
         data: {
             isRed: true,
-            birthday: 1529032123201 // 毫秒值
+            birthday: 1529032123201, // 毫秒值
+            num: 1,
+            person: {
+                name: "Jack",
+                age: 21
+            }
         },
         computed: {
             birth() {
                 const day = new Date(this.birthday);
                 return day.getFullYear() + "年" + day.getMonth() + "月" + day.getDay() + "日";
+            }
+        },
+        watch: {
+            num(val, oldVal) {
+                console.log(val, oldVal);
+            },
+            person:{
+                deep:true,
+                handler(val){
+                    console.log(val.age)
+                }
             }
         }
     });
