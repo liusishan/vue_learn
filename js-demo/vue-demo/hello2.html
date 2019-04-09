@@ -23,9 +23,8 @@
 
 <div id="app">
 
-    <button type="button" @click="color='red'">红色</button>
-    <button type="button" @click="color='blue'">蓝色</button>
-    <div id="box" :class="color">
+    <button type="button" @click="isRed=!isRed">点我切换颜色</button>
+    <div id="box" :class="{red: isRed,blue: !isRed}">
         我是盒子
         我是盒子
     </div>
@@ -37,7 +36,7 @@
     const app = new Vue({
         el: "#app",
         data: {
-            color:"red",
+            isRed: true
         }
     });
 
