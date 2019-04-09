@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div#box{
+            width: 100px;
+            height: 100px;
+            color: darkgray;
+        }
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="app">
+
+    <button type="button" @click="color='red'">红色</button>
+    <button type="button" @click="color='blue'">蓝色</button>
+    <div id="box" :class="color">
+        我是盒子
+        我是盒子
+    </div>
+</div>
+
+<script src="node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+    const app = new Vue({
+        el: "#app",
+        data: {
+            color:"red",
+        }
+    });
+
+</script>
+</body>
+</html>
